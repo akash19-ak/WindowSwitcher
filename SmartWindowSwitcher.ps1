@@ -143,12 +143,13 @@ if (matches)
         try
         {
             if (isUrl)
-            {
-                Process.Start(new ProcessStartInfo {
-                    FileName = launchTarget,
-                    UseShellExecute = true
-                });
-            }
+{
+    Process.Start(new ProcessStartInfo {
+        FileName = "chrome.exe",
+        Arguments = "\"" + launchTarget + "\"",
+        UseShellExecute = true
+    });
+}
             else
             {
                 Process.Start(new ProcessStartInfo {
